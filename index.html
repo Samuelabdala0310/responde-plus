@@ -29,18 +29,32 @@
       </div>
     </div>
 
-    <button onclick="redirect()">Fazer parte da lista</button>
+    <button onclick="redirect()">Quero responder melhor</button>
 
     <p class="small">
-      Vagas limitadas para os primeiros usuários.
+      🔒 Acesso antecipado apenas para os 10000 primeiros.
     </p>
 
+    <p class="social-proof">
+      +<span id="counter">137</span> pessoas já entraram na lista hoje.
+    </p>
+
+    
   </div>
 
   <script>
     function redirect() {
       window.open("https://forms.gle/QTieCekmksEZBQbm7", "_blank");
     }
+
+    // Contador animado
+    let count = 137;
+    const counterElement = document.getElementById("counter");
+
+    setInterval(() => {
+      count++;
+      counterElement.textContent = count;
+    }, 15000); // aumenta a cada 15 segundos
   </script>
 
 </body>
